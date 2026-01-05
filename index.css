@@ -1,0 +1,204 @@
+/* ---------- Base ---------- */
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #0b0f19;
+  --panel: rgba(18, 26, 42, 0.72);
+  --text: #e8eefc;
+  --muted: #a7b3d1;
+  --border: rgba(232, 238, 252, 0.12);
+  --border-strong: rgba(232, 238, 252, 0.22);
+  --shadow: 0 14px 34px rgba(0, 0, 0, 0.38);
+  --radius: 18px;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial,
+    "Apple Color Emoji", "Segoe UI Emoji";
+  color: var(--text);
+
+  /* background */
+  background: radial-gradient(
+      1000px 500px at 20% 10%,
+      rgba(80, 120, 255, 0.22),
+      transparent 60%
+    ),
+    radial-gradient(
+      900px 500px at 85% 25%,
+      rgba(255, 90, 180, 0.18),
+      transparent 60%
+    ),
+    radial-gradient(
+      800px 450px at 60% 90%,
+      rgba(60, 220, 180, 0.12),
+      transparent 55%
+    ),
+    var(--bg);
+
+  display: grid;
+  place-items: center;
+  padding: 26px;
+}
+
+/* subtle overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(232, 238, 252, 0.06),
+    transparent 30%,
+    transparent 70%,
+    rgba(232, 238, 252, 0.05)
+  );
+}
+
+/* ---------- Card / Layout ---------- */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: min(720px, 100%);
+  padding: 22px 18px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--panel);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+}
+
+.wrapper h1 {
+  margin: 4px 0 18px;
+  text-align: center;
+  font-size: 28px;
+  letter-spacing: 0.2px;
+}
+
+/* groups */
+.moveButtons,
+.actionButtons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.actionButtons {
+  margin-top: 24px;
+}
+
+/* ---------- Buttons ---------- */
+.js-rock-button,
+.js-paper-button,
+.js-scissors-button {
+  appearance: none;
+  border: 1px solid var(--border);
+  background: rgba(18, 26, 42, 0.85);
+  color: var(--text);
+  padding: 12px 14px;
+  border-radius: 12px;
+  font-weight: 650;
+  cursor: pointer;
+  min-width: 120px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  transition: transform 0.08s ease, border-color 0.15s ease,
+    background-color 0.15s ease;
+}
+
+.js-rock-button:hover,
+.js-paper-button:hover,
+.js-scissors-button:hover {
+  transform: translateY(-1px);
+  border-color: var(--border-strong);
+  background: rgba(18, 26, 42, 0.96);
+}
+
+.js-rock-button:active,
+.js-paper-button:active,
+.js-scissors-button:active {
+  transform: translateY(0px);
+}
+
+.js-rock-button:disabled,
+.js-paper-button:disabled,
+.js-scissors-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* secondary buttons */
+.js-reset-button,
+.js-autoPlay-button {
+  appearance: none;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  padding: 10px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 650;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.js-reset-button:hover,
+.js-autoPlay-button:hover {
+  background: rgba(232, 238, 252, 0.06);
+  border-color: var(--border-strong);
+}
+
+.js-reset-button:active,
+.js-autoPlay-button:active {
+  background: rgba(232, 238, 252, 0.1);
+}
+
+/* ---------- Text blocks ---------- */
+.js-result {
+  margin: 18px 0 0;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 760;
+}
+
+.js-moves {
+  margin: 10px 0 0;
+  text-align: center;
+  color: var(--muted);
+}
+
+.js-score {
+  width: 100%;
+  max-width: 340px;
+  justify-content: center;
+  margin: 14px 0 0;
+  padding: 12px 14px;
+  background: rgba(33, 48, 77, 0.55);
+  text-align: center;
+  font-weight: 650;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 520px) {
+  .wrapper h1 {
+    font-size: 24px;
+  }
+
+  .js-rock-button,
+  .js-paper-button,
+  .js-scissors-button,
+  .js-reset-button,
+  .js-autoPlay-button {
+    width: 100%;
+    min-width: 0;
+  }
+}
