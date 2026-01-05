@@ -4,8 +4,7 @@ A simple Rock–Paper–Scissors game built with **Vanilla JavaScript**, featuri
 
 ## Demo
 
-- Live Demo: _(add your link here)_
-- Screenshot: _(optional)_
+- Live Demo: [_([https://hizirrkocaman.github.io/rock-paper-scissors-game])
 
 ## Features
 
