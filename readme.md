@@ -29,6 +29,6 @@ A simple Rock–Paper–Scissors game built with **Vanilla JavaScript**, featuri
 Clone the repository and open `index.html`:
 
 ```bash
-git clone <your-repo-url>
-cd <your-repo-folder>
+git clone [<your-repo-url>](https://github.com/hizirrkocaman/rock-paper-scissors-game.git)
+cd [<your-repo-folder>](https://github.com/hizirrkocaman/rock-paper-scissors-game.git)
 ```
