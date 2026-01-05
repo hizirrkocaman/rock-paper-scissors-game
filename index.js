@@ -120,7 +120,7 @@ function playGame(playerMove) {
   updateScoreElement();
 
   resultEl.textContent = result;
-  const pickerText = isAutoPlaying ? "Auto chose" : "You pick: ";
+  const pickerText = isAutoPlaying ? "Auto chose" : "You pick";
   movesEl.textContent =
     `${pickerText}: ${playerMove} - Computer: ${computerMove}` +
     (isAutoPlaying ? " (Auto play is running)" : "");
