@@ -4,7 +4,7 @@ A simple Rock–Paper–Scissors game built with **Vanilla JavaScript**, featuri
 
 ## Demo
 
-- Live Demo: [_([https://hizirrkocaman.github.io/rock-paper-scissors-game])
+- Live Demo: https://hizirrkocaman.github.io/rock-paper-scissors-game
 
 ## Features
 
@@ -29,6 +29,6 @@ A simple Rock–Paper–Scissors game built with **Vanilla JavaScript**, featuri
 Clone the repository and open `index.html`:
 
 ```bash
-git clone [<your-repo-url>](https://github.com/hizirrkocaman/rock-paper-scissors-game.git)
-cd [<your-repo-folder>](https://github.com/hizirrkocaman/rock-paper-scissors-game.git)
+git https://github.com/hizirrkocaman/rock-paper-scissors-game.git
+cd rock-paper-scissors
 ```
